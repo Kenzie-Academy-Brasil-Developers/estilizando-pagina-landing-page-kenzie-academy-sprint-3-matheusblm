@@ -29,7 +29,16 @@ family=Lato -> Títulos, textos
 /* FONTS */
 
 /* VARIÁVEIS */
-:root{}
+:root{
+    --branco: #ffffff;
+    --azulClaro: #007aff;
+    --azulEscuro: #00043e;
+    --cinza: #303030;
+    --cinzaClaro: #818181;
+    --fonteTitulo: 'Montserrat', sans-serif;
+    --fonteTexto: 'Lato', sans-serif;
+    --tamanhoTexto: 15px; 
+}
   
 /* GERAL */
 html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
@@ -38,6 +47,20 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     box-sizing: border-box;
     font-family: sans-serif;
     list-style: none;
+    outline: 0;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--fonteTitulo);
+}
+p, span{
+    font-family: var(--fonteTexto);
+}
+a{  
+    text-decoration: none;
+    color: var(--branco);
+}
+button{
+    cursor: pointer;
 }
 img{
     max-width: 800px;
@@ -51,7 +74,7 @@ div.full-container{
     margin:0 auto;
 }
 div.large-container{
-    width: 100%;
+    width: 95vw;
     max-width: 1170px;
     margin:0 auto;
 }
@@ -67,11 +90,46 @@ html{}
 /* HTML */
   
 /* BODY */
-body{}
+body{
+    background-color: var(--branco);
+}
+
 /* BODY */
   
 /* HEADER */
-header{}
+header{
+    background-color: var(--azulEscuro);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    color: var(--branco);
+    display: flex;
+
+}
+
+.large-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.header__nav{
+    display: none;
+}
+
+.header__menu i{
+    font-size: 1.5rem;
+}
+
+img.header__logo{
+    width: 50px;
+}
+
+
+
 /* HEADER */
   
 /* FOOTER */
@@ -97,7 +155,11 @@ main{}
   
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
+    @media screen and (min-width: 400px) {
+
+    }
   
-    @media screen and (min-width: 800px) {}
+    @media screen and (min-width: 800px) {
+
+    }
 /* MEDIA QUERIES */
