@@ -246,11 +246,12 @@ footer p{
 footer a {
     text-decoration: inherit;
     color: inherit;
+    margin: 0 auto;
 }
 footer img{
     width: 16px;
-    margin: 0 auto;
 }
+
     ::-webkit-scrollbar{}
     ::-webkit-scrollbar-button{}
     ::-webkit-scrollbar-track{}
