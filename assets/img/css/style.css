@@ -46,16 +46,32 @@ html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
     list-style: none;
+    outline: 0;
+}
+figcaption{
+    display: none;
+}
+h1, h2, h3, h4, h5, h6, a{
+    font-family: var(--fonteTitulo);
+}
+p, span{
+    font-family: var(--fonteTexto);
+}
+a{  
+    text-decoration: none;
+    color: var(--branco);
+}
+button{
+    cursor: pointer;
 }
 h2{
     font-family: 'Montserrat', sans-serif;
 }
 img{
     max-width: 800px;
+    width: 100%;
 }
-img{
-    width: 80px;
-}
+
 
 .form-input-model label{
     display: none;
@@ -66,7 +82,8 @@ div.full-container{
     margin:0 auto;
 }
 div.large-container{
-    width: 100%;
+    width: 90vw;
+    /* width: 100%; */
     max-width: 1170px;
     margin:0 auto;
 }
@@ -81,6 +98,9 @@ div.container{
     text-align: center;
     padding-top: 6em;
     
+}
+.secaoCursos img{
+    width: 80px;
 }
 .secaoCursos ul{    
     display: flex;
@@ -172,8 +192,195 @@ input[type='submit']:hover{
     background-color: var(--cinzaClaro);
     transition-duration: 0.25s;
 }
+
+body{
+    background-color: var(--branco);
+    margin: 0 auto;
+    padding-top:97px;
+}
+
+
+header{
+    background-color: var(--azulEscuro);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    width: 100%;
+    color: var(--branco);
+    display: flex;
+
+}
+
+.large-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.header__nav{
+    display: none;
+}
+
+.header__list{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header__menu i{
+    font-size: 1.5rem;
+}
+
+img.header__logo{
+    width: 50px;
+}
+
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.secaoDestaque {
+    height: calc(60vh- 97px);
+    min-height: 450px;
+    width: 100%;
+    padding: 5px 20px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    background-color: var(--azulEscuro);
+    color: var(--branco);
+    font-weight: 500;
+    text-align: center;
+}
+
+.secaoDestaque h2{
+    font-size: 63px;
+    font-family: var(--fonteTitulo);
+    font-weight: normal;
+}
+
+.secaoDestaque p {
+    font-size: 21px;
+    margin: 1em auto;
+}
+
+.secaoDestaqueFormulario{
+    display: flex;
+    justify-content: center;
+    margin: 20px auto 80px;
+}
+
+.secaoDestaqueFormulario input[type=email]{
+    border-radius: 5px 0 0 5px;
+    border: 1px solid var(--cinzaClaro);
+    padding: 1em;
+    font-size: 14px;
+    width: 60vw;
+    max-width: 600px;
+}
+
+.secaoDestaqueFormulario button{
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid var(--cinzaClaro);
+    padding: 1em;
+    background-color: var(--azulClaro);
+    font-style: var(--fonteTitulo);
+    color: var(--branco);
+    border-radius: 0 5px 5px 0;
+
+}
+
+.secaoSobre{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.secaoSobre.flex{
+    display: flex;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+    text-align: left;
+    /* padding: 3rem  5%; */
+}
+
+.secaoSobre .flex-col{
+    width: 100vw;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    padding: 50px;
+    line-height: 1.5rem;
+}
+.secaoSobre .flex-col h2{
+    font-size: 24px;
+    color:var(--cinza);
+    margin-bottom: 2em;
+}
+.secaoSobre .flex-col p{
+    font-size: 19px;
+    color:var(--cinza);
+    margin-bottom: 2rem;
+}
+.secaoSobre .flex-col span{
+    font-size: 19px;
+    color: var(--cinzaClaro);
+    margin-bottom: 2rem;
+    line-height: 2rem;
+}
+.secaoSobre .flex-col button{
+    font-size: 24px;
+    font-family: var(--fonteTexto);
+    background-color: var(--branco);
+    border-radius: 8px;
+    border: .5px solid var(--cinzaClaro);
+    width: 100%;
+    padding: 12px;
+}
+
+.secaoSobre .flex-col ul{
+    list-style: disc;
+    font-size: 19px;
+    color:var(--cinza);
+    margin-bottom: 2rem;
+}
+.secaoSobre .flex-col.flex-col-JS{
+    background-color: var(--cinzaClaro);
+    
+}
+
+.secaoSobre .flex-col.flex-col-JS--text{
+    background-color: var(--cinzaClaro);
+    padding-top:0;
+}
+
+.secaoSobre .flex-col.flex-col-JS h2{
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0px;
+}
+.secaoSobre .flex-col.flex-col-JS img{
+    width: 30%;
+    margin: 0 auto;
+}
+.secaoSobre .flex-col figure{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
-div.flex{
+.secaoContato div.flex{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -183,32 +390,32 @@ div.flex{
     padding: 0 25%;
     padding-top: 6em;
 }
-.flex p {
+.secaoContato .flex p {
     padding-bottom: 1em;
 }
 .secaoContato-informacoes li{
     padding-bottom: 1em;
     
 }
-.flex a{
+.secaoContato .flex a{
     text-decoration: inherit;
     color: inherit;
     cursor: auto;
 }
-.flex img{
+.secaoContato .flex img{
     width: 16px;
     vertical-align: bottom;
 }
 
-.form-input-model{
+.secaoContato .form-input-model{
     margin-top: 0.5em;
 }
-.form-input-model input, textarea{
+.secaoContato .form-input-model input, textarea{
     border: 1px solid var(--cinzaClaro);
     border-radius: 3px;
     width: 50vw;
 }
-.form-input-model textarea{
+.secaoContato .form-input-model textarea{
     height: 5vh;
     max-width: 100%;
     margin-bottom: 0.5em;
@@ -216,16 +423,16 @@ div.flex{
     padding: 5px;
 }
 
-.flex-col{
+.secaoContato .flex-col{
     color: var(--cinzaClaro);
     
 }
 
-.flex-col form{
+.secaoContato .flex-col form{
     display: flex;
     flex-direction: column;
 }
-.flex-col form input{
+.secaoContato .flex-col form input{
     align-self: flex-end;
     padding: 3px 8px;
     background-color: var(--branco);
@@ -273,6 +480,67 @@ footer img{
     }
   
     @media screen and (min-width: 800px) {
+        .header__nav{
+            display: flex;
+            align-items: center;
+        }
+
+        .header__menu{
+            display: none;
+        }
+
+        .header__nav .header__nav__link{
+            color:var(--branco);
+            font-weight: normal;
+            font-size: 13px;
+            margin-left: 24px;
+        }
+
+        .header__nav .header__nav__link:hover{
+            color:var(--azulClaro);
+            font-weight: bold;
+        }
+
+        .secaoDestaque {
+            background-image: url(/assets/img/background-destaque.webp);
+            background-size: cover;
+            justify-content: center;
+            min-height: 600px
+        }
+
+        .secaoSobre .flex{
+            display: flex;
+            flex-flow: row wrap;
+        }
+        .secaoSobre .flex-col{
+            width: 50vw;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+       .secaoSobre .flex-col button{
+            max-width: 200px;
+        }
+
+        .secaoSobre .flex-col.flex-col-JS img{
+            width: 30%;
+            margin: 0 auto;
+        }
+        .secaoSobre .flex-col.flex-col-JS figure{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .secaoSobre .flex-col.flex-col-JS--text{
+            background-color: var(--cinzaClaro);
+            padding:50px;
+        }
+        .secaoSobre .flex-col.flex-col-JS li{
+            margin-left: 20px;
+        }
+
         .secaoCursos p{
             font-size: 15px;
         }
@@ -283,6 +551,7 @@ footer img{
             display: flex;
             align-items: center;
             justify-content: center;
+            width: 100%;
         }
         .secaoCursos ul {
             display: flex;
@@ -294,6 +563,9 @@ footer img{
         }
         .secaoCursos li{
             width: 33%;
+        }
+        .secaoContato{
+            width: 100%;
         }
         .calendario p{
             font-size: 15px;
@@ -321,35 +593,35 @@ footer img{
             margin-right: 20px;
             margin-top: 1em;
         }
-        div.flex {
+        .secaoContato div.flex {
             display: flex;
             flex-direction: row;
             padding: 0%;
             justify-content: space-evenly;
             padding-top: 6em;
         }  
-        .flex-col{
+        .secaoContato .flex-col{
             padding-left: 0;
             align-self: center;
         }
-        .flex-col p, li{
+        .secaoContato .flex-col p, li{
             font-size: 15px;
         }
-        .flex h2{
+        .secaoContato .flex h2{
             margin: 0;
             padding: 0;
             padding-bottom: 10px;
             padding-left: 10px;
         }
-        .form-input-model input {
+        .secaoContato .form-input-model input {
             margin-left: 0;
             margin-right: 10px;
             width: 145px;
         }
-        .form-input-model textarea {
+        .secaoContato .form-input-model textarea {
             width: 300px;
         }
-        .flex-col form{
+        .secaoContato .flex-col form{
             flex-direction: row;
             flex-wrap: wrap;    
             max-width: 320px;
