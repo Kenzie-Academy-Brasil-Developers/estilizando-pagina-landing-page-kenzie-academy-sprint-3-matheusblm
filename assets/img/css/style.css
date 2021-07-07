@@ -305,9 +305,12 @@ main{
 .secaoSobre{
     width: 100%;
     margin: 0 auto;
+    background-color: #f1f1f1;
 }
-
-.secaoSobre.flex{
+.flex-col-python, .flex-col-python-img{
+    background-color: var(--branco);
+}
+.secaoSobre .flex{
     display: flex;
     flex-flow: column wrap;
     flex-basis: 50%;
@@ -355,13 +358,8 @@ main{
     color:var(--cinza);
     margin-bottom: 2rem;
 }
-.secaoSobre .flex-col.flex-col-JS{
-    background-color: var(--cinzaClaro);
-    
-}
 
 .secaoSobre .flex-col.flex-col-JS--text{
-    background-color: var(--cinzaClaro);
     padding-top:0;
 }
 
@@ -379,7 +377,9 @@ main{
     justify-content: center;
     align-items: center;
 }
-  
+.secaoContato{
+width: 100%;
+}
 .secaoContato div.flex{
     display: flex;
     flex-direction: column;
@@ -389,6 +389,7 @@ main{
     color: var(--cinza);
     padding: 0 25%;
     padding-top: 6em;
+
 }
 .secaoContato .flex p {
     padding-bottom: 1em;
@@ -537,7 +538,6 @@ footer img{
             justify-content: center;
         }
         .secaoSobre .flex-col.flex-col-JS--text{
-            background-color: var(--cinzaClaro);
             padding:50px;
         }
         .secaoSobre .flex-col.flex-col-JS li{
