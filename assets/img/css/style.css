@@ -196,7 +196,7 @@ input[type='submit']:hover{
 body{
     background-color: var(--branco);
     margin: 0 auto;
-    padding-top:97px;
+    padding-top:95.70px;
 }
 
 
@@ -248,7 +248,7 @@ main{
 }
 
 .secaoDestaque {
-    height: calc(60vh- 97px);
+    height: calc(60vh- 95.70px);
     min-height: 450px;
     width: 100%;
     padding: 5px 20px;
@@ -268,6 +268,7 @@ main{
     font-size: 63px;
     font-family: var(--fonteTitulo);
     font-weight: normal;
+    color:var(--branco);
 }
 
 .secaoDestaque p {
@@ -305,26 +306,41 @@ main{
 .secaoSobre{
     width: 100%;
     margin: 0 auto;
-    background-color: #f1f1f1;
-}
-.flex-col-python, .flex-col-python-img{
     background-color: var(--branco);
 }
-.secaoSobre .flex{
+
+.python {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+.js {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    background-color: #f1f1f1;
+    padding: 0 80px;
+}
+
+/* .secaoSobre .flex{
+    width: 100%;
     display: flex;
     flex-flow: column wrap;
     flex-basis: 50%;
     text-align: left;
-    /* padding: 3rem  5%; */
-}
+   
+} */
 
 .secaoSobre .flex-col{
-    width: 100vw;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    padding: 50px;
+    padding: 40px;
     line-height: 1.5rem;
+    /* max-width: 700px; */
 }
 .secaoSobre .flex-col h2{
     font-size: 24px;
@@ -359,6 +375,10 @@ main{
     margin-bottom: 2rem;
 }
 
+.secaoSobre .flex-col.flex-col-JS{
+    background-color: #f1f1f1;
+}
+
 .secaoSobre .flex-col.flex-col-JS--text{
     padding-top:0;
 }
@@ -368,17 +388,14 @@ main{
     margin-top: 1rem;
     padding: 0px;
 }
-.secaoSobre .flex-col.flex-col-JS img{
-    width: 30%;
-    margin: 0 auto;
-}
+
 .secaoSobre .flex-col figure{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .secaoContato{
-width: 100%;
+    width: 100%;
 }
 .secaoContato div.flex{
     display: flex;
@@ -506,7 +523,7 @@ footer img{
         }
 
         .secaoDestaque {
-            background-image: url(/assets/img/background-destaque.webp);
+            background-image: url(./../background-destaque.webp);
             background-size: cover;
             justify-content: center;
             min-height: 600px
@@ -514,32 +531,61 @@ footer img{
 
         .secaoSobre .flex{
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: center;
+            flex-basis: 50%;
         }
-        .secaoSobre .flex-col{
-            width: 50vw;
+
+        .python {
             display: flex;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-            align-items: flex-start;
+            flex-flow: row nowrap;
+            justify-content: center;
+            padding: 0 12.5%;
+            flex-basis:70%;
+        }
+
+        .js {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            padding: 0 12.5%;
+            background-color: #f1f1f1;
+        }
+        
+        .secaoSobre .flex-col{
+            width: 100%;
+            display: flex;
+            flex-basis: 50%;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
         }
 
        .secaoSobre .flex-col button{
             max-width: 200px;
         }
 
-        .secaoSobre .flex-col.flex-col-JS img{
-            width: 30%;
-            margin: 0 auto;
-        }
-        .secaoSobre .flex-col.flex-col-JS figure{
+        .secaoSobre .flex-col-python{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
         }
+       
+        .secaoSobre .flex-col-python img{
+            width: 200 px;
+            margin: 0 auto;
+        }
+
+        .secaoSobre .flex-col-JS img{
+            width: 200px;
+            margin: 0 auto;
+        }
+
         .secaoSobre .flex-col.flex-col-JS--text{
             padding:50px;
         }
+
         .secaoSobre .flex-col.flex-col-JS li{
             margin-left: 20px;
         }
